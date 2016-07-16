@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SomeScript01 : MonoBehaviour {
+public class SomeScript01 : MonoBehaviour
+{
+    [SerializeField] Transform _transform;
+    [SerializeField] float _speed = 10f;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+    {
+        _transform.Translate(_transform.right * _speed * Time.deltaTime);	
 	}
 }
